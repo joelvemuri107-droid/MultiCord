@@ -14,24 +14,3 @@ allprojects {
         mavenCentral()
     }
 }
-Then find app/build.gradle (or just build.gradle if there's only one) and make sure it has:
-apply plugin: 'com.android.application'
-
-android {
-    compileSdkVersion 33
-    namespace 'com.discordmulti'
-
-    defaultConfig {
-        applicationId "com.discordmulti"
-        minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
-    }
-}
-
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-}
-Also edit settings.gradle and replace with:
-include ':app'
